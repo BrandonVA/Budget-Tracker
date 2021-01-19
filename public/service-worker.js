@@ -7,7 +7,7 @@ const DATA_CACHE_NAME = "data-cache-v1";
 const FILES_TO_CACHE = [
   '/',
   '/index.html',
-  '/db.js',
+  '/assets/js/db.js',
   '/manifest.webmanifest',
   '/assets/css/styles.css',
   '/assets/js/index.js',
@@ -52,7 +52,9 @@ self.addEventListener("activate", function (evt) {
 });
 
 self.addEventListener('fetch', function (evt) {
-  // cache successful requests to the API
+
+  // console.log(evt.request.method)
+
   if (evt.request.url.includes("/api/")) {
     evt.respondWith(
       caches.open(DATA_CACHE_NAME).then(cache => {
@@ -67,14 +69,21 @@ self.addEventListener('fetch', function (evt) {
           })
           .catch(err => {
             // Network request failed, try to get it from the cache.
+            console.log("this is what is going on: " + err);
+            caches.keys().then(function(keyList) {
+              //do something with your keyList
+              console.log(keyList)
+            });
             return cache.match(evt.request);
           });
       }).catch(err => console.log(err))
-    );
+    )
 
     return;
-  }
+  } 
 
+
+  
   evt.respondWith(
     caches.open(CACHE_NAME).then(cache => {
       return cache.match(evt.request).then(response => {
