@@ -6,6 +6,9 @@
 This is a budget tracking application that will keep track of your budget even if you don't have access to the internet.
 
 
+[Deployed-Site](https://shielded-escarpment-32907.herokuapp.com/) <br />
+[Project-Page](https://github.com/BrandonVA/Budget-Tracker)
+
 ## Table of Contents
 
 * [Installation](#installation)
@@ -20,12 +23,15 @@ npm i
 
 ## Usage 
 
-Go to the live site and start tracking your buget.
+Go to the live site and start tracking your budget.
+<br />
+<img src="public\assets\images\Project-Image.png">
+<br />
 
 
 ## Contributing 
 
-creat a pull request or email me
+create a pull request or email me
 
 -Contact me by email: codebva@gmail.com <br>
 -Contact me by github: [BrandonVA](https://github.com/BrandonVA)
@@ -34,4 +40,5 @@ creat a pull request or email me
 
 
 ## License 
-This project has a [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) license.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
